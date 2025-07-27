@@ -4,11 +4,12 @@ import './AudioPlayer.css'
 
 const AudioPlayer = ({ songInfo }) => {
     const { title, artist } = songInfo;
-    const searchQuery = encodeURIComponent(`${artist} ${title}`);
+
+    const searchQuery = (`${artist} ${title}`);
     const embedUrl = `https://www.youtube.com/embed?listType=search&list=${searchQuery}`;
   return (
     <div className='audio-player'>
-      <h1>Listen Song</h1>
+      <h1>Listen Song: {title} by {artist}</h1>
         {title && artist ? (
             <iframe
             width="100%"

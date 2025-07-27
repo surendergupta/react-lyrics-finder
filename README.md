@@ -1,12 +1,50 @@
-# React + Vite
+# 🎵 Lyrics Finder & Music Player App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and elegant React-based web application that allows users to **search for lyrics** of their favorite songs by providing the **song title** and **artist name**, and also **listen to the song** via embedded YouTube playback.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔍 **Lyrics Search**  
+  Type a song name and artist to instantly fetch lyrics using the [lyrics.ovh](https://lyricsovh.docs.apiary.io/) API.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ▶️ **Song Playback**  
+  Embedded YouTube search lets users listen to the song they searched for.
+
+- 🎧 **Responsive UI**  
+  Clean and minimal design that works on desktop and mobile.
+
+- ⚙️ **Proxy Backend**  
+  Bypasses CORS issues using a simple Node.js Express proxy server.
+
+---
+
+## 📸 Screenshots
+
+![Lyrics Finder Screenshot](./screenshots/lyrics-finder.png)
+
+---
+
+## 🛠️ Tech Stack
+
+**Frontend:**
+- React
+- Axios
+- CSS
+
+**Backend:**
+- Node.js
+- Express
+- Axios
+- CORS
+
+---
+
+## ⚙️ How to Run Locally
+
+### 1. Clone the Repo
+
+```bash
+git clone https://github.com/your-username/lyrics-finder-app.git
+cd lyrics-finder-app

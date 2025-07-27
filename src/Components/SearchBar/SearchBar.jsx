@@ -27,13 +27,11 @@ const SearchBar = ({ setLyrics, setSongInfo }) => {
     const searchLyrics = async() => {
         try {
             if (!artist || !song) return;
-            const encodedArtist = encodeURIComponent(artist.trim());
-            const encodedSong = encodeURIComponent(song.trim());
-            const res = await axios.get(`https://api.lyrics.ovh/v1/${encodedArtist}/${encodedSong}`);
+            const res = await axios.get(`https://api.lyrics.ovh/v1/${artist}/${song}`);
             setLyrics(res.data.lyrics);
             setSongInfo({ song, artist });
         } catch (error) {
-            console.error("Error fetching lyrics:", error);
+            console.error("Error fetching lyrics:", error.message);
             setLyrics("Lyrics not found.");
             setSongInfo({ song: '', artist: '' });
         }
