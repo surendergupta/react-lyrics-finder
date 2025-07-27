@@ -5,12 +5,17 @@ import SearchBar from './Components/SearchBar/SearchBar'
 
 import './App.css'
 const App = () => {
+  const [lyrics, setLyrics] = React.useState('');
+  const [songInfo, setSongInfo] = React.useState({ title: '', artist: '' });
 
   return (
     <>
       <div className='App'>
         <h1>Recat Lyrics Finder App!</h1>
-        <SearchBar />
+        <SearchBar 
+          setLyrics={setLyrics} 
+          setSongInfo={setSongInfo}
+        />
         <hr />
         <LyricsDisplay />
         <hr />
