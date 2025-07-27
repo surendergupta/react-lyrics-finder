@@ -17,9 +17,13 @@ const App = () => {
           setSongInfo={setSongInfo}
         />
         <hr />
-        <LyricsDisplay />
+        <LyricsDisplay 
+          lyrics={lyrics}
+        />
         <hr />
-        <AudioPlayer />
+        <AudioPlayer
+          songInfo={songInfo}
+        />
       </div>
     </>
   )

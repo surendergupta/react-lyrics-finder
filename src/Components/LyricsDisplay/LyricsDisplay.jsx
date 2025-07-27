@@ -2,10 +2,11 @@ import React from 'react'
 
 import './LyricsDisplay.css'
 
-const LyricsDisplay = () => {
+const LyricsDisplay = ({ lyrics }) => {
   return (
-    <div>
-        Lyrics Display
+    <div className='lyrics'>
+        <h2>Lyrics Shows</h2>
+        <pre>{lyrics}</pre>
     </div>
   )
 }
