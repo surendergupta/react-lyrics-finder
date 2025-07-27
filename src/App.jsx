@@ -5,8 +5,8 @@ import SearchBar from './Components/SearchBar/SearchBar'
 
 import './App.css'
 const App = () => {
+  const [songInfo, setSongInfo] = React.useState({ song: '', artist: '' });
   const [lyrics, setLyrics] = React.useState('');
-  const [songInfo, setSongInfo] = React.useState({ title: '', artist: '' });
 
   return (
     <>
