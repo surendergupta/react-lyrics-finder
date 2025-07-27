@@ -4,6 +4,12 @@ A simple and elegant React-based web application that allows users to **search f
 
 ---
 
+## 🌐 Live Demo
+
+👉 [View Live App on Vercel](https://react-lyrics-finder.vercel.app)
+
+---
+
 ## 🚀 Features
 
 - 🔍 **Lyrics Search**  
@@ -22,7 +28,7 @@ A simple and elegant React-based web application that allows users to **search f
 
 ## 📸 Screenshots
 
-![Lyrics Finder Screenshot](./screenshots/lyrics-finder.png)
+![Lyrics Finder Screenshot](./public/screenshots/lyrics-finder.png)
 
 ---
 
@@ -46,5 +52,80 @@ A simple and elegant React-based web application that allows users to **search f
 ### 1. Clone the Repo
 
 ```bash
-git clone https://github.com/your-username/lyrics-finder-app.git
-cd lyrics-finder-app
+git clone https://github.com/surendergupta/react-lyrics-finder.git
+cd react-lyrics-finder
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+npm run dev
+```
+Your Frotend should run on: `http://localhost:5173/`
+
+### 3. Start Backend Server (Proxy)
+
+```bash
+cd backend
+npm install
+node index.js
+
+```
+Your proxy server should run on: `http://localhost:5000`
+
+---
+
+## 🌐 Usage
+1. Enter the **song name** and **artist name** in the input fields.
+2. Click **Search**.
+3. Lyrics will be displayed, and an embedded YouTube player will load the song.
+
+---
+
+## 📦 Folder Structure
+
+```bash
+react-lyrics-finder/
+├── src/                 # React frontend 
+│   ├── components/
+│   │   ├── AudioPlayer/
+│   │   ├── LyricsDisplay/
+│   │   ├── SearchBar/
+│   │   ├── SearchBar.jsx
+│   │   ├── LyricsDisplay.jsx
+│   │   └── AudioPlayer.jsx
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── backend/                 # Express backend
+│   └── index.js
+├── README.md
+
+```
+
+---
+
+## 📌 Limitations
+- `lyrics.ovh` API is unstable and may time out or return incomplete data.
+- Fallback lyrics or switching to Musixmatch API is recommended for production use.
+
+---
+
+## 💡 Future Improvements
+- Add loading indicator while fetching
+- Display error messages in UI
+- Dark mode toggle
+- Use Musixmatch or Genius API for more reliable results
+
+---
+
+## 🧑‍💻 Author
+Surender Gupta
+Feel free to connect or contribute!
+
+---
+
+## 📄 License
+This project is open-source and available under the MIT License.
